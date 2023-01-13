@@ -1,27 +1,16 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import {
-   combineReducers,
-   applyMiddleware,
-   legacy_createStore as createStore,
-} from "redux";
-
-import thunk from 'redux-thunk';
-import { itemReducer } from './state/reducers/itemReducer';
-
-const middlewares = [thunk];
-
-const rootReducer = combineReducers({
-  item: itemReducer,
-});
-
-const store = createStore(rootReducer, applyMiddleware(...middlewares));
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ItemComponent from './components/ItemComponent';
+import ItemView from './components/ItemView';
 
 const App = () => {
   return (
-    <Provider store={store}>       
-      <div>App</div>
-    </Provider>
+    <Router>       
+      <Routes>
+        <Route path="/" element={<ItemComponent />} />
+        <Route path="/edit/:_id" element={<ItemView />} />
+        </Routes> 
+    </Router>
   )
 }
 
