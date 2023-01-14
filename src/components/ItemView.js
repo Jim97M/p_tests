@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Navigate, useNavigate, useNavigation, useParams, useLocation, useHistory } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { updateById } from '../state/actions/ItemActions';
 import '../styles/items.css';
 
 const ItemView = (props) => {
-  const history = useHistory();
   const navigate = useNavigate();
 
    const initialItemState =JSON.stringify({
@@ -29,7 +28,7 @@ const ItemView = (props) => {
    const updateItem = (e) => {
       dispatch(updateById(currentItem._id, currentItem))
       .then(response => {
-         history.push("/");
+         navigate("/");
       })
       .catch(e => {
          console.log(e);
