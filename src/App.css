@@ -1,0 +1,163 @@
+/* General Styles */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Property Card Styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+  transform: translateY(-5px);
+}
+
+li img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Property Image Gallery */
+h3 {
+  margin-top: 1rem;
+}
+
+img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.property-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.property-images img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 130px;
+}
+
+.room-images img {
+  width: 100px;
+  margin-right: 5px;
+  border-radius: 8px;
+}
+
+/* Room Info */
+.room-info {
+  margin-top: 2rem;
+}
+
+.room-info h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.room-info p {
+  color: #555;
+}
+
+.room-pricings {
+  list-style: none;
+  padding: 0;
+}
+
+.room-pricings li {
+  background-color: #f9f9f9;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.room-pricings li span {
+  font-weight: bold;
+}
+
+.room-pricings li .meal-option {
+  color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .property-images img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .room-info h4 {
+    font-size: 1rem;
+  }
+
+  .room-pricings li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Logo and Card Styling */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
