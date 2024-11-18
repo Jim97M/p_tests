@@ -12,11 +12,11 @@ interface RoomType {
     price: number;
     mealOption: { plan: string };
   }[];
-  roomTypeImages: { images: { url: string } }[]; // Define roomTypeImages as an array of objects with `images` and `url` properties
+  roomTypeImages: { images: { url: string } }[]; 
 }
 
 interface Room {
-  roomTypes: RoomType; // Room contains roomType data
+  roomTypes: RoomType; 
 }
 
 interface Property {
@@ -30,18 +30,10 @@ interface Property {
     country: string;
   };
   propertyImages: { images: { url: string } }[];
-  rooms: Room[]; // A property has multiple rooms
+  rooms: Room[]; 
 }
 
-interface FetchResponse {
-  data: Property[]; // Array of Property objects
-}
 
-interface UseFetchItemsReturn {
-  data: FetchResponse | null; 
-  isLoading: boolean;
-  error: Error | null;
-}
 
 interface RoomType {
   name: string;
@@ -55,7 +47,7 @@ interface RoomType {
 }
 
 interface Room {
-  roomTypes: RoomType; // Use RoomType for room details
+  roomTypes: RoomType;
 }
 
 interface Property {

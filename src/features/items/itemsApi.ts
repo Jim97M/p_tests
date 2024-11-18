@@ -2,9 +2,7 @@ import { useQuery, UseQueryResult } from '@tanstack/react-query';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import apiClient from '../../api/apiClient';
-import { getItem, getAllItems } from './itemsSlice';
 
-// Define the Property interface if not already defined
 interface Property {
   id: number;
   name: string;
@@ -16,7 +14,7 @@ interface Property {
     country: string;
   };
   propertyImages: { images: { url: string } }[];
-  rooms: Room[]; // A property has multiple rooms
+  rooms: Room[];
 }
 
 interface Room {
@@ -47,7 +45,7 @@ export const useFetchItems = (): UseQueryResult<Property[], Error> => {
     refetchInterval: 10000,
   });
 
-  const { data, isSuccess, isError, error } = queryResult;
+  const { data, isSuccess } = queryResult;
   const dispatch = useDispatch();
 
   useEffect(() => {
